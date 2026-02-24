@@ -1,0 +1,9 @@
+from sqlalchemy import Column, Integer, String, Text
+from .database import Base
+
+class Resume(Base):
+    __tablename__ = "resume"
+
+    id = Column(Integer, primary_key=True, index=True)
+    section = Column(String, index=True)
+    content = Column(Text)
