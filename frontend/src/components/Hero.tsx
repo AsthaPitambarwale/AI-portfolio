@@ -79,7 +79,7 @@ export const Hero = () => {
           <div className="flex-1 flex justify-center md:justify-start items-center">
             <div className="relative w-full flex justify-center md:justify-start">
               <img
-                src="src/assets/Hero.png"
+                src="../assets/Hero.png"
                 alt="3D Developer Character"
                 className="w-[75%] md:w-[85%] lg:w-[95%] max-w-[500px] object-contain drop-shadow-2xl"
               />
