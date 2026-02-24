@@ -8,3 +8,4 @@ requests
 torch
 transformers
 sentence-transformers
+scikit-learn
