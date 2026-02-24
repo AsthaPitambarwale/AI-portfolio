@@ -5,6 +5,6 @@ uvicorn
 sqlalchemy
 python-dotenv
 requests
-sentence-transformers==2.7.0
-faiss-cpu==1.7.4
-torch==2.2.2+cpu
+torch
+transformers
+sentence-transformers
