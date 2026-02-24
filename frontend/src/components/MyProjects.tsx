@@ -60,7 +60,7 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Astha's Cakes",
-    image: "src/assets/projects/asthas-cake.png",
+    image: "../assets/projects/asthas-cake.png",
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     demoLink: "https://astha-s-cakkes.vercel.app/",
     codeLink: "https://github.com/AsthaPitambarwale/Astha-s-Cakkes",
@@ -69,7 +69,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: "AI Article Processing System",
-    image: "src/assets/projects/AI-Enhanced-Article.png",
+    image: "../assets/projects/AI-Enhanced-Article.png",
     tags: ["React", "Node.js", "Laravel"],
     demoLink: "#",
     codeLink:
@@ -79,7 +79,7 @@ const projects: Project[] = [
   {
     id: 3,
     title: "Real Estate AI Chatbot",
-    image: "src/assets/projects/realestate-chatbot.png",
+    image: "../assets/projects/realestate-chatbot.png",
     tags: ["Django", "OpenAI API", "React", "Tailwind CSS", "Chart.js"],
     demoLink: "https://realestate-chatbot-sigma.vercel.app/",
     codeLink:
@@ -89,7 +89,7 @@ const projects: Project[] = [
   {
     id: 4,
     title: "Ticket Booking Backend",
-    image: "src/assets/projects/ticket-booking.png",
+    image: "../assets/projects/ticket-booking.png",
     tags: ["Node.js", "Express.js", "MongoDB"],
     demoLink: "https://ticket-booking-backend-ow9x.onrender.com",
     codeLink:
@@ -99,7 +99,7 @@ const projects: Project[] = [
   {
     id: 5,
     title: "Cancer Donation Dashboard",
-    image: "src/assets/projects/Cancer-donation dashboard.png",
+    image: "../assets/projects/Cancer-donation dashboard.png",
     tags: ["React", "Tailwind CSS", "Chart.js"],
     demoLink: "https://cancer-donation-dashboard.vercel.app/",
     codeLink:
@@ -109,7 +109,7 @@ const projects: Project[] = [
   {
     id: 6,
     title: "Therapy Practice Website",
-    image: "src/assets/Projects/Therapy.png",
+    image: "../assets/Projects/Therapy.png",
     tags: ["Next.js", "React", "CSS"],
     demoLink: "https://elegant-capybara-7c06f7.netlify.app/",
     codeLink:
@@ -120,7 +120,7 @@ const projects: Project[] = [
     id: 7,
     title: "Kilangi Jewellery – Homepage",
     tags: ["HTML", "CSS", "JavaScript"],
-    image: "src/assets/projects/Kalingi-Jwellery.png",
+    image: "../assets/projects/Kalingi-Jwellery.png",
     demoLink: "http://kilangi-jewellery.vercel.app",
     codeLink: "https://github.com/AsthaPitambarwale/Kilangi-Jewellery",
     type: "Frontend",
@@ -128,7 +128,7 @@ const projects: Project[] = [
   {
     id: 8,
     title: "BudgetBuddy",
-    image: "src/assets/projects/budgetbuddy-landing.png",
+    image: "../assets/projects/budgetbuddy-landing.png",
     tags: ["React", "Tailwind CSS", "Local Storage"],
     demoLink: "https://budget-tracker-landing-orcin.vercel.app/",
     codeLink: "https://github.com/AsthaPitambarwale/budget-tracker-landing",
@@ -138,7 +138,7 @@ const projects: Project[] = [
     id: 9,
     title: "Grocery Store Website",
     tags: ["HTML", "CSS", "JavaScript", "MySQL"],
-    image: "src/assets/projects/grocery-store.png",
+    image: "../assets/projects/grocery-store.png",
     demoLink: "https://asthapitambarwale.github.io/FMGS-grocery-store/",
     codeLink: "https://github.com/AsthaPitambarwale/FMGS-grocery-store",
     type: "Full Stack",
@@ -147,7 +147,7 @@ const projects: Project[] = [
     id: 10,
     title: "NGO Charity Website",
     tags: ["HTML", "CSS", "JavaScript", "Vercel"],
-    image: "src/assets/projects/leelashankar-ngo.png",
+    image: "../assets/projects/leelashankar-ngo.png",
     demoLink: "https://leela-shankar-foundation-mi443v58e-asthapitambarwales-projects.vercel.app/",
     codeLink: "https://github.com/AsthaPitambarwale/LeelaShankarFoundation",
     type: "Frontend"
@@ -156,7 +156,7 @@ const projects: Project[] = [
     id: 11,
     title: "Lost and Found Portal",
     tags: ["HTML", "CSS", "JavaScript", "Flask", "Python"],
-    image: "src/assets/projects/l&f.png",
+    image: "../assets/projects/l&f.png",
     demoLink: "",
     codeLink: "https://github.com/AsthaPitambarwale/Lost-FoundApplication",
     type: "Full Stack",
@@ -165,7 +165,7 @@ const projects: Project[] = [
     id: 12,
     title: "Vishal Bharti School Website",
     tags: ["HTML", "CSS"],
-    image: "src/assets/projects/vishal-bharti.png",
+    image: "../assets/projects/vishal-bharti.png",
     demoLink: "https://vishal-bharti-ac-in.vercel.app/",
     codeLink: "https://github.com/AsthaPitambarwale/VishalBharti.ac.in",
     type: "Frontend",
@@ -174,7 +174,7 @@ const projects: Project[] = [
     id: 13,
     title: "Fitness Gym Website",
     tags: ["HTML", "CSS", "JavaScript"],
-    image: "src/assets/projects/gym.png",
+    image: "../assets/projects/gym.png",
     demoLink: "https://asthapitambarwale.github.io/AshFitness/",
     codeLink: "https://github.com/AsthaPitambarwale/AshFitness",
     type: "Frontend",
@@ -183,7 +183,7 @@ const projects: Project[] = [
     id: 14,
     title: "Pizza Restaurant Website",
     tags: ["HTML", "CSS", "JavaScript"],
-    image: "src/assets/projects/pizza.png",
+    image: "../assets/projects/pizza.png",
     demoLink: "https://asthapitambarwale.github.io/FoodyHILLS/",
     codeLink: "https://github.com/AsthaPitambarwale/FoodyHILLS",
     type: "Frontend",
