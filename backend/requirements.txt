@@ -3,4 +3,5 @@ uvicorn
 sqlalchemy
 python-dotenv
 requests
-SentenceTransformer
+sentence-transformers
+faiss-cpu
