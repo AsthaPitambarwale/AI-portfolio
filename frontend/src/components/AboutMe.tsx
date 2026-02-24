@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export const AboutMe = () => {
   const [showInfo, setShowInfo] = useState(false); // ✅ State for toggle
