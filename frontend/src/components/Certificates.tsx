@@ -64,11 +64,10 @@ export const Certificates = () => {
   const speed = 0.2;
 
   // Infinite auto scroll
-  useAnimationFrame((t, delta) => {
+  useAnimationFrame((_, delta) => {
     if (!containerRef.current) return;
 
     const width = containerRef.current.scrollWidth / 2;
-
     let newX = x.get() - speed * delta;
 
     if (Math.abs(newX) >= width) {
@@ -90,8 +89,10 @@ export const Certificates = () => {
           style={{ x }}
           drag="x"
           dragConstraints={{ left: -2000, right: 0 }}
+          dragElastic={0.1} // smoother dragging
           className="flex gap-8 w-max cursor-grab active:cursor-grabbing px-6"
         >
+          {/* Duplicate certificates for infinite scroll */}
           {[...certificates, ...certificates].map((cert, index) => (
             <motion.div
               key={index}
