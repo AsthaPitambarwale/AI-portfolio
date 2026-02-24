@@ -25,7 +25,7 @@ export const Contact = () => {
           {/* Left - Character */}
           <div className="flex-1 flex justify-center md:justify-center items-center">
             <img
-              src="src/assets/Contact.png"
+              src="../assets/Contact.png"
               alt="Contact Character"
               className="w-[85%] md:w-[85%] lg:w-[95%] max-w-[450px] object-contain drop-shadow-2xl"
             />
