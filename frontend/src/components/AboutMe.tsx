@@ -14,7 +14,7 @@ export const AboutMe = () => {
           {/* Left - Character Image */}
           <div className="flex-1 flex justify-center items-center">
             <img
-              src="src/assets/About.png"
+              src="../assets/About.png"
               alt="About Character"
               className="w-[70%] md:w-[80%] lg:w-[90%] max-w-[420px] object-contain drop-shadow-2xl"
             />
