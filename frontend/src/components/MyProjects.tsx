@@ -28,6 +28,7 @@ interface Project {
   type: "Full Stack" | "Frontend" | "Backend";
 }
 
+// Tech icon mapping
 const techIcons: Record<string, any> = {
   React: SiReact,
   "Node.js": SiNodedotjs,
@@ -46,7 +47,15 @@ const techIcons: Record<string, any> = {
   CSS: SiCss3,
 };
 
-// Make sure to fill your projects array here
+// Filters with proper literal types
+const filters: ("All" | "Full Stack" | "Frontend" | "Backend")[] = [
+  "All",
+  "Full Stack",
+  "Frontend",
+  "Backend",
+];
+
+// All project objects
 const projects: Project[] = [
   {
     id: 1,
@@ -182,16 +191,12 @@ const projects: Project[] = [
 ];
 
 export const MyProjects = () => {
-  // Use state variables with underscores to avoid unused variable errors
-  const [filter, setFilter] = useState<"All" | "Full Stack" | "Frontend" | "Backend">("All");
+  const [filter, setFilter] = useState<typeof filters[number]>("All");
   const [showAll, setShowAll] = useState(false);
 
-  const filteredProjects = 
-    filter === "All"
-      ? projects
-      : projects.filter((p) => p.type === filter);
+  const filteredProjects =
+    filter === "All" ? projects : projects.filter((p) => p.type === filter);
 
-  // Make sure project parameter is used fully
   const ProjectCard = ({ project }: { project: Project }) => (
     <div className="bg-slate-950/70 backdrop-blur-lg rounded-2xl border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 group flex flex-col justify-between h-full hover:-translate-y-2 hover:shadow-2xl">
       <div className="p-5">
@@ -202,8 +207,8 @@ export const MyProjects = () => {
               ${project.type === "Full Stack"
                 ? "bg-purple-600/20 text-purple-400 border border-purple-500/30"
                 : project.type === "Frontend"
-                  ? "bg-blue-600/20 text-blue-400 border border-blue-500/30"
-                  : "bg-green-600/20 text-green-400 border border-green-500/30"
+                ? "bg-blue-600/20 text-blue-400 border border-blue-500/30"
+                : "bg-green-600/20 text-green-400 border border-green-500/30"
               }
             `}
           >
@@ -271,7 +276,7 @@ export const MyProjects = () => {
           </h2>
 
           <div className="flex justify-center gap-3 flex-wrap">
-            {["All", "Full Stack", "Frontend", "Backend"].map((type) => (
+            {filters.map((type) => (
               <button
                 key={type}
                 onClick={() => setFilter(type)}
