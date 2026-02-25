@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Moon, Menu, X } from 'lucide-react';
 
@@ -6,9 +7,10 @@ export const Header = () => {
 
   return (
     <header className="sticky top-5 z-50 bg-slate-950/80 backdrop-blur-m">
-      <div className="max-w-4xl mx-auto px-2 sm:px-6 lg:px-8 border border-purple-800 rounded-full">
+      <div
+        className={`max-w-4xl mx-auto px-2 sm:px-6 lg:px-8 border border-purple-800 ${isMenuOpen ? "rounded-2xl" : "rounded-full md:rounded-full rounded-2xl"} transition-all duration-300`}>
         <div className="flex items-center justify-between h-16">
-          
+
           {/* Logo */}
           <div className="flex items-center">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 font-bold text-lg">
@@ -84,7 +86,7 @@ export const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t border-slate-800">
             <div className="flex flex-col space-y-2">
-              {["home", "about", "skills", "projects","certificates","contact"].map(
+              {["home", "about", "skills", "projects", "certificates", "contact"].map(
                 (item, index) => (
                   <a
                     key={index}

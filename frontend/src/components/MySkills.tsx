@@ -48,7 +48,7 @@ const infiniteSkills = [...skills, ...skills];
 export default function MySkills() {
   return (
     <section id="skills" className="py-28 bg-slate-950 text-white">
-      
+
       {/* Heading */}
       <div className="text-center mb-20">
         <h2 className="text-5xl font-bold bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent">
@@ -64,7 +64,7 @@ export default function MySkills() {
 
         <motion.div
           className="flex gap-12 w-max items-end"
-          drag="x"
+          drag={window.innerWidth >= 768 ? "x" : false}
           dragConstraints={{ left: -1000, right: 0 }}
           whileTap={{ cursor: "grabbing" }}
           animate={{ x: ["0%", "-50%"] }}

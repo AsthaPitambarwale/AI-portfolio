@@ -99,7 +99,7 @@ const projects: Project[] = [
   {
     id: 5,
     title: "Cancer Donation Dashboard",
-    image: "../assets/projects/Cancer-donation dashboard.png",
+    image: "../assets/projects/Cancer-donation Dashboard.png",
     tags: ["React", "Tailwind CSS", "Chart.js"],
     demoLink: "https://cancer-donation-dashboard.vercel.app/",
     codeLink:
@@ -109,7 +109,7 @@ const projects: Project[] = [
   {
     id: 6,
     title: "Therapy Practice Website",
-    image: "../assets/Projects/Therapy.png",
+    image: "../assets/projects/Therapy.png",
     tags: ["Next.js", "React", "CSS"],
     demoLink: "https://elegant-capybara-7c06f7.netlify.app/",
     codeLink:
@@ -148,7 +148,7 @@ const projects: Project[] = [
     title: "NGO Charity Website",
     tags: ["HTML", "CSS", "JavaScript", "Vercel"],
     image: "../assets/projects/leelashankar-ngo.png",
-    demoLink: "https://leela-shankar-foundation-mi443v58e-asthapitambarwales-projects.vercel.app/",
+    demoLink: "https://leelashankarfoundationorg.vercel.app/",
     codeLink: "https://github.com/AsthaPitambarwale/LeelaShankarFoundation",
     type: "Frontend"
   },

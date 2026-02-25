@@ -11,48 +11,57 @@ import {
 
 interface Certificate {
   title: string;
+  organisation: string;
   file: string;
   gradient: string;
 }
 
 const certificates: Certificate[] = [
   {
-    title: "Fundamentals of Python Programming - Infosys",
+    title: "Fundamentals of Python",
+    organisation: "Infosys",
     file: "cert1",
     gradient: "from-yellow-400 to-orange-500",
   },
   {
-    title: "HTML, CSS & JavaScript - Hunorho",
+    title: "HTML, CSS & JavaScript",
+    organisation: "Hunorho",
     file: "cert2",
     gradient: "from-cyan-400 to-blue-600",
   },
   {
-    title: "Complete Guide Campus Interviews",
+    title: "Guide Campus Interviews",
+    organisation: "NPTEL",
     file: "cert3",
     gradient: "from-purple-500 to-indigo-600",
   },
   {
-    title: "FullStack Development - CodeAlpha",
+    title: "FullStack Development",
+    organisation: "CodeAlpha",
     file: "cert4",
     gradient: "from-red-500 to-purple-700",
   },
   {
-    title: "From Learner to Builder: AI Agent Architecture",
+    title: "AI Agent Architecture",
+    organisation: "IBM",
     file: "cert5",
     gradient: "from-green-400 to-emerald-600",
   },
   {
-    title: "FullStack Web Development - Edureka",
+    title: "FullStack Web Development",
+    organisation: "Edureka",
     file: "cert6",
     gradient: "from-pink-500 to-rose-600",
   },
   {
-    title: "CipherByte Technologies - Aptitude",
+    title: "Aptitude Test",
+    organisation: "CipherByte Technologies",
     file: "cert7",
     gradient: "from-indigo-500 to-blue-700",
   },
   {
     title: "IOT-4U Webinar Certificate",
+    organisation: "College Webinar",
     file: "cert8",
     gradient: "from-amber-400 to-orange-600",
   },
@@ -78,7 +87,7 @@ export const Certificates = () => {
   });
 
   return (
-    <section className="py-20 bg-slate-950">
+    <section id="certificates" className="py-20 bg-slate-950">
       <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-14">
         My Certificates & Achievements
       </h2>
@@ -116,9 +125,13 @@ export const Certificates = () => {
               </div>
 
               <div className="pt-16 pb-8 px-6 text-center">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4 min-h-[60px]">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2 min-h-[40px]">
                   {cert.title}
                 </h3>
+
+                <h4 className="text-lg text-gray-800 mb-2 min-h-[40px]">
+                  {cert.organisation}
+                </h4>
 
                 <a
                   href={`/assets/certificates/${cert.file}.pdf`}
