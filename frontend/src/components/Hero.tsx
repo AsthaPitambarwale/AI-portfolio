@@ -56,7 +56,7 @@ export const Hero = () => {
 
               {/* Primary Button */}
               <a
-                href="https://drive.google.com/file/d/1FsTqi7kHgWyQ91Qr1kj79oG4LGbCuR1N/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Jl3WdEbiEqgoGmdGUMoAMZrOirLkeanT/view?usp=drive_link"
                 download="Astha_Pitambarwale_Resume.pdf"
                 className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-sm font-medium rounded-full hover:opacity-90 transition-all shadow-lg shadow-indigo-900/30"
               >
