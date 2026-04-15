@@ -62,7 +62,7 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Online Training Platform",
-    image: "../assets/projects/onlinetarining.png",
+    image: "../assets/projects/onlinetraining.png",
     tags: ["React","Typescript","TailwindCSS","Node.js","Express.js","better-Sqlite3"],
     demoLink: "https://online-training-learn-hub.vercel.app/",
     codeLink: "https://github.com/AsthaPitambarwale/OnlineTraining-LearnHub",
