@@ -1,0 +1,523 @@
+1️⃣ Explain the end-to-end request flow in your project.
+
+Answer:
+
+User enters a question in React frontend.
+
+Frontend sends POST request to /chat endpoint.
+
+FastAPI receives request and validates request body using Pydantic.
+
+Backend fetches resume context from database.
+
+Backend sends formatted prompt to OpenRouter API.
+
+OpenRouter returns AI response.
+
+Backend sends response back to frontend.
+
+Frontend displays AI answer.
+
+2️⃣ Why did you choose FastAPI over Django or Flask?
+
+Answer:
+
+Built-in request validation using Pydantic
+
+Automatic Swagger documentation
+
+High performance (ASGI based)
+
+Cleaner API structure
+
+Async support
+
+Since this project is API-heavy, FastAPI was a better fit than Django.
+
+3️⃣ How does FastAPI dependency injection (Depends) work?
+
+Answer:
+
+FastAPI uses Depends() to inject dependencies like database sessions.
+
+Example:
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+FastAPI automatically creates and closes DB sessions per request.
+
+4️⃣ Why is /chat a POST endpoint and not GET?
+
+Answer:
+
+Because:
+
+It sends JSON body (user question)
+
+It interacts with AI service
+
+It modifies server-side logic
+
+POST is meant for data submission
+
+GET should not contain request body.
+
+5️⃣ Difference between 401, 403, 404, 422?
+
+Answer:
+
+401 → Unauthorized (Missing/Invalid authentication)
+
+403 → Forbidden (Authenticated but no permission)
+
+404 → Resource not found
+
+422 → Validation error (Wrong JSON format)
+
+You faced 401 due to missing Authorization header.
+
+6️⃣ How do you handle environment variables locally vs production?
+
+Answer:
+
+Locally → .env file using python-dotenv
+
+On Render → Environment variables dashboard
+
+Production never uses .env file.
+
+7️⃣ How do you securely store API keys?
+
+Answer:
+
+Never hardcode keys
+
+Use environment variables
+
+Keep .env in .gitignore
+
+Set keys in Render dashboard
+
+8️⃣ What is CORS and why configure it?
+
+Answer:
+
+CORS allows frontend (different domain) to call backend API.
+
+Without CORS:
+Browser blocks request.
+
+You configured:
+
+allow_origins=["*"]
+
+In production, you should restrict to your frontend domain.
+
+9️⃣ What does Base.metadata.create_all() do?
+
+Answer:
+
+It creates database tables based on SQLAlchemy models if they don’t exist.
+
+It does NOT modify existing tables.
+
+🔟 What is SQLAlchemy ORM?
+
+Answer:
+
+ORM = Object Relational Mapping.
+
+It lets you interact with database using Python objects instead of raw SQL.
+
+Example:
+
+db.query(Resume).all()
+
+Instead of:
+
+SELECT * FROM resume;
+1️⃣1️⃣ Sync vs Async in FastAPI?
+
+Answer:
+
+Sync → Blocking request
+
+Async → Non-blocking, better performance under high load
+
+Your project uses synchronous requests, but could be upgraded to async for better scalability.
+
+1️⃣2️⃣ How does OpenRouter Chat API work?
+
+Answer:
+
+You send:
+
+Model name
+
+Messages array
+
+Headers (Authorization)
+
+API forwards to underlying LLM (like GPT)
+
+Returns JSON with:
+
+{
+  "choices": [
+    {
+      "message": {
+        "content": "AI response"
+      }
+    }
+  ]
+}
+1️⃣3️⃣ What is temperature in LLMs?
+
+Answer:
+
+Temperature controls randomness.
+
+0 → deterministic
+
+1 → more creative
+
+1 → highly random
+
+You used 0.2 for professional, controlled answers.
+
+1️⃣4️⃣ How do you prevent hallucination?
+
+Answer:
+
+Restrict AI to resume context
+
+Add clear prompt rules
+
+Lower temperature
+
+If info not found → return fixed message
+
+This reduces incorrect answers.
+
+1️⃣5️⃣ What if OpenRouter API fails?
+
+Answer:
+
+You handled:
+
+Timeout exception
+
+HTTP errors
+
+API error response
+
+System returns user-friendly error instead of crashing.
+
+1️⃣6️⃣ How would you add chat history?
+
+Answer:
+
+Options:
+
+Store previous messages in database
+
+Send previous messages array to OpenRouter
+
+Use conversation ID per user
+
+1️⃣7️⃣ How would you scale this system?
+
+Answer:
+
+Use PostgreSQL instead of SQLite
+
+Enable async requests
+
+Use Redis caching
+
+Add rate limiting
+
+Use load balancer
+
+Deploy with Docker
+
+1️⃣8️⃣ Production improvements?
+
+Answer:
+
+Restrict CORS
+
+Add logging
+
+Add rate limiting
+
+Add authentication
+
+Add monitoring (Prometheus)
+
+Add token usage tracking
+
+1️⃣9️⃣ Security risks in current implementation?
+
+Answer:
+
+Open CORS (*)
+
+No rate limiting
+
+No authentication
+
+No API usage monitoring
+
+2️⃣0️⃣ How would you convert this to SaaS?
+
+Answer:
+
+Add user login
+
+Store chat history
+
+Add subscription plans
+
+Add billing integration (Stripe)
+
+Track token usage per user
+
+Admin dashboard
+
+
+
+
+🔥 1️⃣ Explain Your Project
+❓ Q1: Explain your AI Portfolio project.
+
+Answer:
+
+I built an AI-powered portfolio assistant using React and FastAPI.
+Instead of a static portfolio website, users can ask questions about my skills, experience, and projects in natural language.
+The frontend is built with React, the backend uses FastAPI, and it integrates with OpenRouter’s LLM API to generate intelligent responses based only on my resume data.
+The system is deployed on Render and uses environment variables for secure API key management.
+
+🔥 2️⃣ Architecture Question
+❓ Q2: Explain the complete architecture.
+
+Answer:
+
+The architecture follows a client-server model.
+
+User types a question in React frontend.
+
+React sends a POST request to the FastAPI /chat endpoint.
+
+FastAPI processes the message and calls the AI service layer.
+
+AI service builds a structured prompt using resume data.
+
+Backend sends request to OpenRouter API.
+
+OpenRouter returns the AI-generated response.
+
+Backend sends the response back to frontend.
+
+React displays the AI reply in chat UI.
+
+🔥 3️⃣ Why FastAPI?
+❓ Q3: Why did you choose FastAPI?
+
+Answer:
+
+I chose FastAPI because:
+
+It is lightweight and high-performance.
+
+It has automatic API documentation (Swagger).
+
+It supports async operations.
+
+It integrates easily with modern AI APIs.
+
+Compared to Django, it is simpler and more suitable for API-based systems.
+
+🔥 4️⃣ Why POST for /chat?
+❓ Q4: Why is /chat a POST request?
+
+Answer:
+
+Because we are sending data (the user message) inside the request body.
+GET requests are mainly used for retrieving data, while POST is used when sending structured JSON data to the server.
+
+🔥 5️⃣ What is 401 Error?
+❓ Q5: You faced a 401 error. What is it and how did you fix it?
+
+Answer:
+
+A 401 error means Unauthorized.
+In my case, OpenRouter was rejecting requests because the Authorization header was either missing or incorrect.
+
+I fixed it by:
+
+Ensuring OPENROUTER_API_KEY was properly set in Render environment variables.
+
+Sending the correct header format:
+
+headers = {
+  "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+  "Content-Type": "application/json"
+}
+
+After verifying via /test-key, it worked correctly.
+
+🔥 6️⃣ What is 422 Error?
+❓ Q6: Why did you get 422 error?
+
+Answer:
+
+422 means Unprocessable Entity.
+It happened because the JSON body sent from Swagger was invalid.
+
+Instead of:
+
+{ "what is skills?" }
+
+It should be:
+
+{ "message": "What are your skills?" }
+🔥 7️⃣ Environment Variables
+❓ Q7: Why use environment variables?
+
+Answer:
+
+API keys are sensitive and should never be hardcoded in code.
+Environment variables:
+
+Improve security
+
+Separate development and production configs
+
+Prevent leaking secrets to GitHub
+
+On Render, I configured OPENROUTER_API_KEY in the dashboard.
+
+🔥 8️⃣ How Do You Prevent Hallucination?
+❓ Q8: How do you prevent the AI from hallucinating?
+
+Answer:
+
+I use strict prompt engineering.
+In the system prompt, I clearly instruct the model:
+
+Answer only using resume context.
+
+Do not add extra information.
+
+If not found, say:
+"I don't have that information in the resume."
+
+This reduces hallucination significantly.
+
+🔥 9️⃣ How Would You Scale This?
+❓ Q9: How would you scale this to 10,000 users?
+
+Answer:
+
+I would:
+
+Replace SQLite with PostgreSQL.
+
+Use connection pooling.
+
+Deploy backend behind a load balancer.
+
+Add caching for repeated questions.
+
+Add rate limiting.
+
+Use Redis for session memory.
+
+Use async FastAPI endpoints for better concurrency.
+
+🔥 🔟 What Was the Biggest Challenge?
+❓ Q10: What was the biggest challenge in this project?
+
+Answer:
+
+The biggest challenge was debugging production issues on Render, especially 401 errors and import issues.
+
+I learned:
+
+How Python module imports work.
+
+Difference between relative and absolute imports.
+
+How environment variables behave in production.
+
+How to debug logs in deployed environments.
+
+🔥 11️⃣ What is SQLAlchemy?
+❓ Q11: What is SQLAlchemy?
+
+Answer:
+
+SQLAlchemy is a Python ORM (Object Relational Mapper).
+It allows us to interact with the database using Python classes instead of raw SQL queries.
+
+🔥 12️⃣ What is CORS?
+❓ Q12: What is CORS and why did you enable it?
+
+Answer:
+
+CORS (Cross-Origin Resource Sharing) allows frontend and backend running on different domains to communicate.
+
+Since my frontend and backend are deployed separately, I enabled CORS middleware in FastAPI.
+
+🔥 13️⃣ What is Temperature?
+❓ Q13: Why did you use temperature = 0.2?
+
+Answer:
+
+Temperature controls randomness.
+
+0 → deterministic, consistent answers
+
+High values → creative but less predictable
+
+I used 0.2 to keep responses professional and factual.
+
+🔥 14️⃣ What is RAG?
+❓ Q14: What is Retrieval-Augmented Generation?
+
+Answer:
+
+RAG combines:
+
+Retrieval of relevant data
+
+Generation using LLM
+
+It improves accuracy by grounding the AI in real data.
+
+I initially implemented vector search using embeddings and cosine similarity.
+
+🔥 15️⃣ What Would You Improve?
+❓ Q15: What improvements would you make?
+
+Answer:
+
+Add chat history memory
+
+Add authentication
+
+Add analytics dashboard
+
+Add rate limiting
+
+Switch to PostgreSQL
+
+Add caching
+
+Deploy with Docker
