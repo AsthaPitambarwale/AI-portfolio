@@ -18,6 +18,7 @@ import {
   SiCss3,
   SiTypescript,
   SiFirebase,
+  SiBootstrap,
 } from "react-icons/si";
 
 interface Project {
@@ -49,6 +50,7 @@ const techIcons: Record<string, any> = {
   HTML: SiHtml5,
   CSS: SiCss3,
   Firebase: SiFirebase,
+  Bootstrap: SiBootstrap,
 };
 
 // Filters with proper literal types
@@ -110,6 +112,16 @@ const projects: Project[] = [
   },
   {
     id: 6,
+    title: "CampusFunda - Redesign",
+    image: "../assets/projects/campusfunda.png",
+    tags: ["HTML", "CSS", "Bootstrap"],
+    demoLink: "https://asthapitambarwale.github.io/campusfunda-2.0/",
+    codeLink:
+      "https://github.com/AsthaPitambarwale/campusfunda-2.0",
+    type: "Frontend",
+  },
+  {
+    id: 7,
     title: "Ticket Booking Backend",
     image: "../assets/projects/ticket-booking.png",
     tags: ["Node.js", "Express.js", "MongoDB"],
@@ -119,7 +131,7 @@ const projects: Project[] = [
     type: "Backend",
   },
   {
-    id: 7,
+    id: 8,
     title: "Cancer Donation Dashboard",
     image: "../assets/projects/Cancer-donation Dashboard.png",
     tags: ["React", "Tailwind CSS", "Chart.js"],
@@ -129,7 +141,7 @@ const projects: Project[] = [
     type: "Frontend",
   },
   {
-    id: 8,
+    id: 9,
     title: "Therapy Practice Website",
     image: "../assets/projects/Therapy.png",
     tags: ["Next.js", "React", "CSS"],
@@ -139,7 +151,7 @@ const projects: Project[] = [
     type: "Frontend",
   },
    {
-    id: 9,
+    id: 10,
     title: "Kilangi Jewellery – Homepage",
     tags: ["HTML", "CSS", "JavaScript"],
     image: "../assets/projects/Kalingi-Jwellery.png",
@@ -148,7 +160,7 @@ const projects: Project[] = [
     type: "Frontend",
   },
   {
-    id: 10,
+    id: 11,
     title: "BudgetBuddy",
     image: "../assets/projects/budgetbuddy-landing.png",
     tags: ["React", "Tailwind CSS", "Local Storage"],
@@ -157,7 +169,7 @@ const projects: Project[] = [
     type: "Frontend",
   },
   {
-    id: 11,
+    id: 12,
     title: "Grocery Store Website",
     tags: ["HTML", "CSS", "JavaScript", "MySQL"],
     image: "../assets/projects/grocery-store.png",
@@ -166,7 +178,7 @@ const projects: Project[] = [
     type: "Full Stack",
   },
   {
-    id: 12,
+    id: 13,
     title: "NGO Charity Website",
     tags: ["HTML", "CSS", "JavaScript", "Vercel"],
     image: "../assets/projects/leelashankar-ngo.png",
@@ -175,7 +187,7 @@ const projects: Project[] = [
     type: "Frontend"
   },
   {
-    id: 13,
+    id: 14,
     title: "Lost and Found Portal",
     tags: ["HTML", "CSS", "JavaScript", "Flask", "Python"],
     image: "../assets/projects/l&f.png",
@@ -184,7 +196,7 @@ const projects: Project[] = [
     type: "Full Stack",
   },
   {
-    id: 14,
+    id: 15,
     title: "Vishal Bharti School Website",
     tags: ["HTML", "CSS"],
     image: "../assets/projects/vishal-bharti.png",
@@ -193,7 +205,7 @@ const projects: Project[] = [
     type: "Frontend",
   },
   {
-    id: 15,
+    id: 16,
     title: "Fitness Gym Website",
     tags: ["HTML", "CSS", "JavaScript"],
     image: "../assets/projects/gym.png",
@@ -202,7 +214,7 @@ const projects: Project[] = [
     type: "Frontend",
   },
    {
-    id: 16,
+    id: 17,
     title: "Pizza Restaurant Website",
     tags: ["HTML", "CSS", "JavaScript"],
     image: "../assets/projects/pizza.png",
