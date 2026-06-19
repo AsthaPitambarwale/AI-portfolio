@@ -64,6 +64,15 @@ const filters: ("All" | "Full Stack" | "Frontend" | "Backend")[] = [
 // All project objects
 const projects: Project[] = [
   {
+    id: 0,
+    title: "EMI Calculator",
+    image: "../assets/projects/emi.png",
+    tags: ["Next.js","Typescript","TailwindCSS","React"],
+    demoLink: "https://emi-calculator-pro-tawny.vercel.app/",
+    codeLink: "https://github.com/AsthaPitambarwale/emi-calculator-pro",
+    type: "Frontend",
+  },
+  {
     id: 1,
     title: "Doodle_Delight- India-s Best Stationery Store",
     image: "../assets/projects/DoodleDelight-Stationary.png",
