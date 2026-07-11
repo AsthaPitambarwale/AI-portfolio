@@ -40,7 +40,7 @@ const techIcons: Record<string, any> = {
   "Express.js": SiExpress,
   MongoDB: SiMongodb,
   Typescript: SiTypescript,
-  "Tailwind CSS": SiTailwindcss,
+  "TailwindCSS": SiTailwindcss,
   JavaScript: SiJavascript,
   PHP: SiPhp,
   MySQL: SiMysql,
