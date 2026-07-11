@@ -72,7 +72,7 @@ const projects: Project[] = [
     tags: [ "OpenRouter","Node.js","Express.js","Typescript","TailwindCSS","React"],
     demoLink: "https://ai-powered-csv-importer-beta.vercel.app/",
     codeLink: "https://github.com/AsthaPitambarwale/AI-powered-CSV-Importer",
-    type: "FullStack",
+    type: "Full Stack",
   },
     {
     id: 1,
@@ -81,7 +81,7 @@ const projects: Project[] = [
     tags: [ "Node.js","Express.js","Typescript","TailwindCSS","React"],
     demoLink: "https://spiceroots-resturant.vercel.app/",
     codeLink: "https://github.com/AsthaPitambarwale/Spiceroots-Resturant",
-    type: "FullStack",
+    type: "Full Stack",
   },
   {
     id: 2,
