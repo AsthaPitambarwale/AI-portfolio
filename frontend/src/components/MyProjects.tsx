@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Brain } from "lucide-react";
 import {
   SiReact,
   SiNodedotjs,
@@ -51,6 +51,7 @@ const techIcons: Record<string, any> = {
   CSS: SiCss3,
   Firebase: SiFirebase,
   Bootstrap: SiBootstrap,
+  OpenRouter: Brain,
 };
 
 // Filters with proper literal types
@@ -67,7 +68,7 @@ const projects: Project[] = [
     id: 0,
     title: "AI-CSV importer",
     image: "../assets/projects/AI-CSV importer.png",
-    tags: ["Node.js","Express.js","Typescript","TailwindCSS","React"],
+    tags: ["OpenRouter","Node.js","Express.js","Typescript","TailwindCSS","React"],
     demoLink: "https://ai-powered-csv-importer-beta.vercel.app/",
     codeLink: "https://github.com/AsthaPitambarwale/AI-powered-CSV-Importer",
     type: "Full Stack",
