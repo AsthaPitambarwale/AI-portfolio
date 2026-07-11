@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ExternalLink, Github, Brain } from "lucide-react";
+import { ExternalLink, Github, Bot } from "lucide-react";
 import {
   SiReact,
   SiNodedotjs,
@@ -51,7 +51,7 @@ const techIcons: Record<string, any> = {
   CSS: SiCss3,
   Firebase: SiFirebase,
   Bootstrap: SiBootstrap,
-  OpenRouter: Brain,
+  OpenRouter: Bot,
 };
 
 // Filters with proper literal types
