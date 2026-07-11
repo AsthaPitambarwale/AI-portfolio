@@ -62,7 +62,7 @@ export const Footer = () => {
             className="inline-flex items-center gap-2 mt-6 text-indigo-400 hover:text-purple-400 transition"
           >
             <Mail className="w-5 h-5" />
-            your.email@gmail.com
+            asthapitambarwale@gmail.com
           </a>
         </div>
 
