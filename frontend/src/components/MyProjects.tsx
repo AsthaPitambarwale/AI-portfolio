@@ -77,7 +77,7 @@ const projects: Project[] = [
     id: 1,
     title: "Spiceroots-Resturant",
     image: "../assets/projects/Spiceroots.png",
-    tags: [ "Node.js","Express.js","Typescript","TailwindCSS","React"],
+    tags: [ "Node.js","Express.js","Typescript","TailwindCSS","React","MongoDB"],
     demoLink: "https://spiceroots-resturant.vercel.app/",
     codeLink: "https://github.com/AsthaPitambarwale/Spiceroots-Resturant",
     type: "Full Stack",
