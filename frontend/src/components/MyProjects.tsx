@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
+import { SiOpenrouter } from "react-icons/si";
 import {
   SiReact,
   SiNodedotjs,
@@ -19,7 +20,6 @@ import {
   SiTypescript,
   SiFirebase,
   SiBootstrap,
-  SiOpenrouter,
 } from "react-icons/si";
 
 interface Project {
@@ -34,7 +34,6 @@ interface Project {
 
 // Tech icon mapping
 const techIcons: Record<string, any> = {
-  "OpenRouter": SiOpenrouter,
   React: SiReact,
   "Node.js": SiNodedotjs,
   "Express.js": SiExpress,
@@ -53,6 +52,7 @@ const techIcons: Record<string, any> = {
   CSS: SiCss3,
   Firebase: SiFirebase,
   Bootstrap: SiBootstrap,
+  "OpenRouter": SiOpenrouter,
 };
 
 // Filters with proper literal types
