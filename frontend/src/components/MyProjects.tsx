@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import {
-  SiOpenrouter,
   SiReact,
   SiNodedotjs,
   SiExpress,
@@ -20,6 +19,7 @@ import {
   SiTypescript,
   SiFirebase,
   SiBootstrap,
+  SiOpenrouter,
 } from "react-icons/si";
 
 interface Project {
